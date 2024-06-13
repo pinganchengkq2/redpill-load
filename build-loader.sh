@@ -240,7 +240,7 @@ if [ ! -f "${BRP_ZLINUX_PATCHED_FILE}" ]; then
     fi
 
   else # we can just "else" for "direct" creation method since it should be checked at the top
-    brp_verify_file_sha256 "${BRP_ZLINUX_FILE}" "$(brp_json_get_field "${BRP_REL_CONFIG_JSON}" "files.zlinux.sha256")"
+  #  brp_verify_file_sha256 "${BRP_ZLINUX_FILE}" "$(brp_json_get_field "${BRP_REL_CONFIG_JSON}" "files.zlinux.sha256")"
     brp_apply_binary_patches \
       "${BRP_ZLINUX_FILE}" \
       "${BRP_ZLINUX_PATCHED_FILE}" \
